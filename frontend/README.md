@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ERC721 Token Transfer Tracker Frontend
+
+A modern Next.js frontend application for tracking ERC721 token transfers using Hemera indexer.
+
+## Features
+
+- Real-time token transfer tracking
+- Clean and responsive dashboard interface
+- Token transfer history table
+- Built with modern React and TypeScript
+- Styled with Tailwind CSS
+
+## Tech Stack
+
+- Next.js 13+ (App Router)
+- TypeScript
+- Tailwind CSS
+- Styled Components
+- React Query (for data fetching)
+
+## Directory Structure
+
+```
+frontend/
+├── app/              # Next.js app router pages
+├── components/       # React components
+├── lib/             # Utility functions and helpers
+├── pages/           # Additional pages (if using pages router)
+├── public/          # Static assets
+├── services/        # API services and data fetching
+└── styles/          # Global styles and Tailwind config
+```
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Set up environment variables:
+Create a `.env.local` file with the following variables:
+```env
+NEXT_PUBLIC_API_URL=your_api_url
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application will be available at `http://localhost:3000`
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Start development server
+- `npm run build` - Build production bundle
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Component Overview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Dashboard
+The main dashboard component displaying token transfer data and statistics.
 
-## Deploy on Vercel
+### TransferTable
+A responsive table component showing detailed transfer information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Header
+Navigation and user interface header component.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## API Integration
+
+The frontend integrates with the Hemera indexer through the services defined in `services/api.ts`. Make sure your Hemera indexer is properly configured and running.
+
+## Customization
+
+### Styling
+- Modify `tailwind.config.ts` for theme customization
+- Global styles can be found in `styles/globals.css`
+- Component-specific styles use styled-components
+
+### Adding New Features
+1. Create new components in the `components` directory
+2. Add new API services in the `services` directory
+3. Create new pages in the `app` directory
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Development Guidelines
+
+- Follow TypeScript best practices
+- Use functional components with hooks
+- Implement proper error handling
+- Write clean, maintainable code
+- Follow the existing styling patterns

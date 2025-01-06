@@ -1,3 +1,2 @@
-[submodule "hemera-indexer"]
-    path = hemera-indexer
-    url = https://github.com/HemeraProtocol/hemera-indexer.git
+.env
+/frontend/node_modules
